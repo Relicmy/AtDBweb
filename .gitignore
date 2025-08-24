@@ -12,4 +12,4 @@ datasets/
 data/
 
 # Специфичные пути
-tests/test_Augmentations/
+tests/test_Augmentations/data
