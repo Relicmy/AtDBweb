@@ -1,0 +1,9 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" opacity="0.05">
+  <rect width="200" height="200" fill="#2a2a2a" />
+  <circle cx="60" cy="140" r="3" fill="white" />
+  <circle cx="80" cy="140" r="3" fill="white" />
+  <circle cx="100" cy="140" r="3" fill="white" />
+  <circle cx="120" cy="140" r="3" fill="white" />
+  <circle cx="140" cy="140" r="3" fill="white" />
+  <text x="100" y="180" font-family="Arial" font-size="22" font-weight="600" text-anchor="middle" fill="white">AtDBwed</text>
+</svg>

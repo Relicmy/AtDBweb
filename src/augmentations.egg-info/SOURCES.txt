@@ -1,0 +1,13 @@
+pyproject.toml
+setup.py
+src/augmentations/__init__.py
+src/augmentations/transformations.py
+src/augmentations.egg-info/PKG-INFO
+src/augmentations.egg-info/SOURCES.txt
+src/augmentations.egg-info/dependency_links.txt
+src/augmentations.egg-info/top_level.txt
+src/augmentations/utils/__init__.py
+src/augmentations/utils/default_parametr.py
+src/augmentations/utils/descriptors.py
+src/augmentations/utils/loger_config.py
+src/augmentations/utils/s_typing.py

@@ -1,0 +1,15 @@
+# Файлы (игнорировать везде в проекте)
+coords_seed.json
+coords_site_element.json
+requirements.txt
+system_file
+tt.ipynb
+tasks.txt
+
+# Папки (игнорировать везде в проекте)
+admin/
+datasets/
+data/
+
+# Специфичные пути
+tests/test_Augmentations/

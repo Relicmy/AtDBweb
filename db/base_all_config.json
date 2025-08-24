@@ -1,0 +1,104 @@
+{
+    "Name_task": {
+        "Resize": {
+            "path_in_out": {
+                "source_path_img": "",
+                "output_path_img": "",
+                "source_path_txt": "",
+                "output_path_txt": ""
+            },
+            "const_parametr": {
+                "compress": {
+                    "start": 1.0,
+                    "step": 0.1,
+                    "stop": 0.7,
+                    "part": "none"
+                },
+                "decompress": {
+                    "start": 1.0,
+                    "step": 0.1,
+                    "stop": 1.5,
+                    "part": "none"
+                },
+                "resize": {
+                    "start": 1.1,
+                    "step": 0.1,
+                    "stop": 1.5,
+                    "operation": "all"
+                }
+            },
+            "process_task": "test_mode"
+        },
+        "ElementGrouper": {
+            "path_in_out": {
+                "source_path_img": "",
+                "output_path_img": "",
+                "source_path_txt": "",
+                "output_path_txt": ""
+            }, "list_background": {
+                "path_background": "",
+                "color_list": [
+                    "red",
+                    "orange",
+                    "yellow",
+                    "green",
+                    "blue",
+                    "purple",
+                    "pink",
+                    "white",
+                    "black",
+                    "gray",
+                    "brown",
+                    "cyan",
+                    "magenta",
+                    "lime",
+                    "gold",
+                    "silver",
+                    "maroon",
+                    "olive",
+                    "teal",
+                    "navy"
+                ]
+            },
+            "process_task": "test_mode",
+            "density": 0.5,
+            "pole_size": 1280},
+
+            "BackgroundReplase": {
+                "path_in_out": {
+                    "source_path_img": "",
+                    "output_path_img": "",
+                    "source_path_txt": "",
+                    "output_path_txt": ""
+                }, "list_background": {
+                "path_background": "",
+                "color_list": [
+                    "red",
+                    "orange",
+                    "yellow",
+                    "green",
+                    "blue",
+                    "purple",
+                    "pink",
+                    "white",
+                    "black",
+                    "gray",
+                    "brown",
+                    "cyan",
+                    "magenta",
+                    "lime",
+                    "gold",
+                    "silver",
+                    "maroon",
+                    "olive",
+                    "teal",
+                    "navy"
+                ]
+            },
+            "process_task": "test_mode",
+            "density": 0.5,
+            "pole_size": 1280
+
+        
+    }
+}}

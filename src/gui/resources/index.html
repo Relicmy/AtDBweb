@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AtDBweb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="custom-line"></div>
+    </header>
+    <main>
+        <div class="panel-ui">
+            <div class="previev-panel-ui">
+                <p>Task list</p>
+            </div>
+            <div id="task-list">
+                <!-- <div class="button-task"></div> -->
+            </div>
+            <div class="create-task">
+                <div class="line-button"></div>
+                <button id="create-task" class="b-create-task">Create task</button>
+                <button id="del-task" class="b-create-task">Delete task</button>
+            </div>
+            <div id="modal-create"></div>
+        </div>
+
+        <div class="java-loader-module">
+            <div class="dinamic-settings-panel">
+                <!-- <div id="default-panel">
+                    <h1 id="h-marking">Обработка размеченных файлов</h1>
+                    <div class="tabs">
+                        <button class="tab active" data-tab="append-file">Append file</button>
+                        <button class="tab" data-tab="augmentation">Augmentation</button>
+                    </div>
+
+                    <div class="tab-content active" id="tab-append-file">
+                        <div id="dropZone">
+                            <div class="dropZone">
+                                <label for="fileInput-image" class="file-label">
+                                    Выберите изображения
+                                </label>
+                                <input type="file" id="fileInput-image" class="file-input" multiple>
+                                <div id="image-cheaker" class="file-name">Изображения не выбраны</div>
+                            </div>
+                            <div id="fileList-image"></div>
+                            <div class="dropZone">
+                                <label for="fileInput-coords" class="file-label">
+                                    Выберите файлы координат
+                                </label>
+                                <input type="file" id="fileInput-coords" class="file-input" multiple>
+                                <div id="coords-cheaker" class="file-name">Файлы координат не выбраны</div>
+                            </div>
+                            <div id="fileList-coords"></div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tab-augmentation">
+                        
+                    </div>
+                </div> -->
+
+                <div id="settings-ui" class="hidden">
+                    <div id="grid-title-settings">
+                        <button id="back-button">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <span>Назад</span>
+                        </button>
+                        <h2 id="current-task-name">Текущая задача</h2>
+                    </div>
+                    <div class="tabs">
+                        <button class="tab" data-tab="main">Main settings</button>
+                        <button class="tab" data-tab="add-ui">Add UI</button>
+                        <button class="tab" data-tab="append-file">Append file</button>
+                        <button class="tab" data-tab="augmentation">Augmentation</button>
+                    </div>
+                    
+                    
+                    <div class="tab-content" id="tab-append-file">
+                        <div id="dropZone">
+                            <div class="dropZone">
+                                <label for="fileInput-image" class="file-label">
+                                    Выберите изображения
+                                </label>
+                                <input type="file" id="fileInput-image" class="file-input" multiple>
+                                <div id="image-cheaker" class="file-name">Изображения не выбраны</div>
+                            </div>
+                            <div id="fileList-image"></div>
+                            <div class="dropZone">
+                                <label for="fileInput-coords" class="file-label">
+                                    Выберите файлы координат
+                                </label>
+                                <input type="file" id="fileInput-coords" class="file-input" multiple>
+                                <div id="coords-cheaker" class="file-name">Файлы координат не выбраны</div>
+                            </div>
+                            <div id="fileList-coords"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tab-augmentation">
+                        <!-- Загружается динамически -->
+                    </div>
+                    <div class="tab-content" id="tab-main">
+                        <p>Основные настройки задачи</p>
+                    </div>
+
+                    <div class="tab-content" id="tab-add-ui">
+                        <button id="start-browser" class="b-create-task">Start Browser</button>
+                        <h3>Список элементов</h3>
+                        
+                        <div id="items-container">
+                            <!-- Первая строка по умолчанию -->
+                            <div class="item">
+                                <input class="int-form" type="text" placeholder="введите адрес страницы">
+                                <input class="int-form" type="text" placeholder="введите css класс элемента">
+                                <input class="int-form" type="text" placeholder="введите текст элемента">
+                                <input class="int-form" type="text" placeholder="введите классовость элемента">
+                                <button type="button" class="remove-btn" onclick="removeItem(this)">✕</button>
+                            </div>
+                            <button type="button" class="add-btn" onclick="addItem()">+ Добавить позицию</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

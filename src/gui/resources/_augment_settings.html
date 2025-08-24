@@ -1,0 +1,261 @@
+<div class="augmentation-container" id="augmentation-content">
+
+    <!-- Режим работы -->
+    <div class="mode-section">
+        <h3>Режим работы</h3>
+        <div class="mode-options">
+            <label class="radio-option">
+                <input type="radio" name="process-mode" value="test_mode" checked>
+                <span class="radio-custom"></span>
+                <span class="radio-label">Тестовый режим</span>
+            </label>
+            <label class="radio-option">
+                <input type="radio" name="process-mode" value="production_mode">
+                <span class="radio-custom"></span>
+                <span class="radio-label">Продукционный режим</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Операции -->
+    <div class="operations-section">
+        <h3>Операции трансформации</h3>
+        <div class="operation-card" data-operation="reduce">
+            <div class="op-header">
+                <label class="switch">
+                    <input type="checkbox" class="op-toggle">
+                    <span class="slider"></span>
+                </label>
+                <h4>Уменьшение (reduce)</h4>
+            </div>
+            <div class="op-params">
+                <div class="param-row">
+                    <label>Start:</label>
+                    <input type="number" name="start" class="param-input" step="0.1" min="0.6" max="0.9" value="{{resize['reduce']['start']}}">
+                </div>
+                <div class="param-row">
+                    <label>Step:</label>
+                    <input type="number" name="step" class="param-input" step="0.1" min="0.1" max="0.2" value="{{resize['reduce']['step']}}">
+                </div>
+                <div class="param-row">
+                    <label>Stop:</label>
+                    <input type="number" name="stop" class="param-input" step="0.1" min="0.5" max="0.8" value="{{resize['reduce']['stop']}}">
+                </div>
+                <div class="param-row">
+                    <label>Part:</label>
+                    <select name="part" class="param-select">
+                        <option value="{{resize['reduce']['part']}}">Все</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="operation-card" data-operation="increase">
+            <div class="op-header">
+                <label class="switch">
+                    <input type="checkbox" class="op-toggle">
+                    <span class="slider"></span>
+                </label>
+                <h4>Увеличение (increase)</h4>
+            </div>
+            <div class="op-params">
+                <div class="param-row">
+                    <label>Start:</label>
+                    <input type="number" name="start" class="param-input" step="0.1" min="1.1" max="1.4" value="{{resize['increase']['start']}}">
+                </div>
+                <div class="param-row">
+                    <label>Step:</label>
+                    <input type="number" name="step" class="param-input" step="0.1" min="0.1" max="0.2" value="{{resize['increase']['step']}}">
+                </div>
+                <div class="param-row">
+                    <label>Stop:</label>
+                    <input type="number" name="stop" class="param-input" step="0.1" min="1.2" max="1.6" value="{{resize['increase']['stop']}}">
+                </div>
+                <div class="param-row">
+                    <label>Part:</label>
+                    <select name="part" class="param-select">
+                        <option value="{{resize['increase']['part']}}">Все</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="operation-card" data-operation="stretch">
+            <div class="op-header">
+                <label class="switch">
+                    <input type="checkbox" class="op-toggle">
+                    <span class="slider"></span>
+                </label>
+                <h4>Растяжение (stretch)</h4>
+            </div>
+            <div class="op-params">
+                <div class="param-row">
+                    <label>Start:</label>
+                    <input type="number" name="start" class="param-input" step="0.1" min="1.0" max="1.5" value="{{resize['stretch']['start']}}">
+                </div>
+                <div class="param-row">
+                    <label>Step:</label>
+                    <input type="number" name="step" class="param-input" step="0.1" min="0.1" max="0.2" value="{{resize['stretch']['step']}}">
+                </div>
+                <div class="param-row">
+                    <label>Stop:</label>
+                    <input type="number" name="stop" class="param-input" step="0.1" min="1.1" max="1.6" value="{{resize['stretch']['stop']}}">
+                </div>
+                <div class="param-row">
+                    <label>Part:</label>
+                    <select name="part" class="param-select">
+                        <option value="width">Ширина</option>
+                        <option value="height">Высота</option>
+                        <option value="all">Все</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="operation-card" data-operation="squeeze">
+            <div class="op-header">
+                <label class="switch">
+                    <input type="checkbox" class="op-toggle">
+                    <span class="slider"></span>
+                </label>
+                <h4>Сжатие (squeeze)</h4>
+            </div>
+            <div class="op-params">
+                <div class="param-row">
+                    <label>Start:</label>
+                    <input type="number" name="start" class="param-input" step="0.1" min="0.5" max="1.0" value="1.0">
+                </div>
+                <div class="param-row">
+                    <label>Step:</label>
+                    <input type="number" name="step" class="param-input" step="0.1" min="0.1" max="0.2" value="0.1">
+                </div>
+                <div class="param-row">
+                    <label>Stop:</label>
+                    <input type="number" name="stop" class="param-input" step="0.1" min="0.6" max="1.0" value="0.6">
+                </div>
+                <div class="param-row">
+                    <label>Part:</label>
+                    <select name="part" class="param-select">
+                        <option value="width">Ширина</option>
+                        <option value="height">Высота</option>
+                        <option value="all">Все</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Замена фона -->
+    <div class="background-section">
+        <h3>Замена фона</h3>
+        <div class="bg-options">
+            <label class="switch">
+                <input type="checkbox" id="bg-replace-toggle">
+                <span class="slider"></span>
+            </label>
+            <span>Активировать замену фона</span>
+        </div>
+        <div class="bg-params" style="display: none;">
+            <div class="param-row">
+                <label>Размер поля (pole_size):</label>
+                <input type="number" id="pole-size" class="param-input" min="320" max="2000" value="800">
+            </div>
+            <div class="param-row">
+                <label>Плотность (density):</label>
+                <input type="number" id="density" class="param-input" step="0.1" min="0.1" max="0.8" value="0.5">
+            </div>
+            <div class="bg-source">
+                <h4>Источник фона</h4>
+                <div class="source-option">
+                    <label class="radio-option">
+                        <input type="radio" name="bg-source" value="color" checked>
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Цвета</span>
+                    </label>
+                    <div class="color-picker">
+                        <input type="color" class="color-input" data-purpose="bg" value="#FFFFFF">
+                        <button class="add-color-btn" data-purpose="bg">Добавить</button>
+                    </div>
+                    <div class="color-list" id="color-list"></div>
+                </div>
+                <div class="source-option">
+                    <label class="radio-option">
+                        <input type="radio" name="bg-source" value="image">
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Изображения</span>
+                    </label>
+                    <div class="image-path">
+                        <input type="text" id="bg-image-path" class="path-input"
+                            placeholder="Путь к папке с изображениями...">
+                        <button class="browse-btn" data-action="browse" data-target="input-path-img">Обзор</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Группировка -->
+    <div class="grouping-section">
+        <h3>Группировка элементов</h3>
+        <div class="group-options">
+            <label class="switch">
+                <input type="checkbox" id="grouping-toggle">
+                <span class="slider"></span>
+            </label>
+            <span>Активировать группировку</span>
+        </div>
+        <div class="group-params">
+            <div class="param-row">
+                <label>Размер поля (pole_size):</label>
+                <input type="number" id="group-pole-size" class="param-input" min="320" max="2000" value="800">
+            </div>
+            <div class="param-row">
+                <label>Плотность (density):</label>
+                <input type="number" id="group-density" class="param-input" step="0.1" min="0.1" max="0.8" value="0.5">
+            </div>
+            <div class="group-type">
+                <h4>Тип группировки</h4>
+                <label class="radio-option">
+                    <input type="radio" name="group-type" value="group_only" checked>
+                    <span class="radio-custom"></span>
+                    <span class="radio-label">Только элементы</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="group-type" value="group_all">
+                    <span class="radio-custom"></span>
+                    <span class="radio-label">Все элементы</span>
+                </label>
+            </div>
+            <div class="group-source">
+                <h4>Источник фона</h4>
+                <div class="source-option">
+                    <label class="radio-option">
+                        <input type="radio" name="group-source" value="color" checked>
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Цвета</span>
+                    </label>
+                    <div class="color-picker">
+                        <input type="color" class="color-input" data-purpose="group" value="#FFFFFF">
+                        <button class="add-color-btn" data-purpose="group">Добавить</button>
+                    </div>
+                    <div class="color-list" id="group-color-list"></div>
+                </div>
+                <div class="source-option">
+                    <label class="radio-option">
+                        <input type="radio" name="group-source" value="image">
+                        <span class="radio-custom"></span>
+                        <span class="radio-label">Изображения</span>
+                    </label>
+                    <div class="image-path">
+                        <input type="text" id="group-image-path" class="path-input"
+                            placeholder="Путь к папке с изображениями...">
+                        <button class="browse-btn" data-action="browse" data-target="input-path-img">Обзор</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка запуска -->
+    <div class="action-section">
+        <button id="update-Augmentations" class="start-btn">Сохранить настройки</button>
+    </div>
+</div>
+
