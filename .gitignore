@@ -5,6 +5,8 @@ requirements.txt
 system_file
 tt.ipynb
 tasks.txt
+maket.txt
+main_data.db
 
 # Папки (игнорировать везде в проекте)
 admin/

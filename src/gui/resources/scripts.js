@@ -384,6 +384,79 @@ class TabManager {
         console.log("✅ initAugmentationSettings: готова");
     }
 
+    getParamResize() {
+        const operations = {};
+        const dictCard = {
+            "reduce": document.querySelector('.operation-card[data-operation="reduce"]'),
+            "squeeze": document.querySelector('.operation-card[data-operation="squeeze"]'),
+            "stretch": document.querySelector('.operation-card[data-operation="stretch"]'),
+            "increase": document.querySelector('.operation-card[data-operation="increase"]')
+        };
+
+        for (const [key, card] of Object.entries(dictCard)) {
+            if (!card) continue;
+
+            operations[key] = {
+                start: parseFloat(card.querySelector('input[name="start"]')?.value || 0),
+                step: parseFloat(card.querySelector('input[name="step"]')?.value || 0),
+                stop: parseFloat(card.querySelector('input[name="stop"]')?.value || 0),
+                part: card.querySelector('select[name="part"]')?.value || "all"
+            };
+        }
+
+        return {
+            "Resize": {
+                "operations": operations,
+                "process_task": document.querySelector('input[name="process-mode"]:checked')?.value || "test_mode"
+            }
+        };
+    };
+
+    getParamBgreplase() {
+        
+    };
+
+    getParam() {
+        
+        const pre_uploader = {
+            "Resize": this.getParamResize()["Resize"],
+            
+            "ElementGrouper": {
+                "path_in_out": path_in_out, "operations": {
+                    "group_only": {
+                        "path_background": Path(self.path_bg / "background_image"), "color_list": ["red", "orange", "yellow", "green", "blue", "purple", "pink",
+                            "white", "black", "gray", "brown", "cyan", "magenta", "lime",
+                            "gold", "silver", "maroon", "olive", "teal", "navy"]
+                    },
+                    "group_all": {
+                        "path_background": Path(self.path_bg / "background_image"), "color_list": ["red", "orange", "yellow", "green", "blue", "purple", "pink",
+                            "white", "black", "gray", "brown", "cyan", "magenta", "lime",
+                            "gold", "silver", "maroon", "olive", "teal", "navy"]
+                    }
+                },
+                "process_task": "test_mode",
+                "density": 0.5,
+                "pole_size": 1280
+            },
+            "BackgroundReplase": {
+                "path_in_out": path_in_out, "operations": {
+                    "group_only": {
+                        "path_background": Path(self.path_bg / "background_image"), "color_list": ["red", "orange", "yellow", "green", "blue", "purple", "pink",
+                            "white", "black", "gray", "brown", "cyan", "magenta", "lime",
+                            "gold", "silver", "maroon", "olive", "teal", "navy"]
+                    },
+                    "group_all": {
+                        "path_background": Path(self.path_bg / "background_image"), "color_list": ["red", "orange", "yellow", "green", "blue", "purple", "pink",
+                            "white", "black", "gray", "brown", "cyan", "magenta", "lime",
+                            "gold", "silver", "maroon", "olive", "teal", "navy"]
+                    }
+                },
+                "process_task": "test_mode",
+                "density": 0.5,
+                "pole_size": 1280
+            }
+}
+    }
 
     async loadAugmentationTab(container) {
         try {
